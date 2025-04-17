@@ -1,18 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
 namespace WpfApp1
 {
     partial class Partner 
     {
+        MasterPolDBEntities entities = new MasterPolDBEntities();
         public string Discont
         { 
             get
             {
-                return "Скидка";
+                int discount = 0;
+                var totalQ = entities.Partner_products.Where(p => p.Partner_id == Id).Sum(p => (int?)p.Kolvo) ?? 0;
+                if (totalQ < 10000)
+                    discount = 0;
+                else if (totalQ >= 10000 && totalQ < 50000)
+                    discount = 5;
+                else if (totalQ >= 50000 && totalQ < 300000)
+                    discount = 10;
+                else if (totalQ >= 300000)
+                    discount = 15;
+
+                return $"{discount}%";
             } 
         }
 
