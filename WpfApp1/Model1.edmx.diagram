@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a223864719c649c4b66fc233ea6af8be" Name="Diagram1">
+        <EntityTypeShape EntityType="MasterPolDBModel.Material_type" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPolDBModel.Material_type_Product" Width="1.5" PointX="2.875" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPolDBModel.Partner" Width="1.5" PointX="7.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPolDBModel.Partner_products" Width="1.5" PointX="9.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPolDBModel.Partner_type" Width="1.5" PointX="5.375" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPolDBModel.Product" Width="1.5" PointX="5.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPolDBModel.Product_type" Width="1.5" PointX="0.75" PointY="0.625" IsExpanded="true" />
+        <AssociationConnector Association="MasterPolDBModel.FK_Material_type_Product_Material_type" ManuallyRouted="false" />
+        <AssociationConnector Association="MasterPolDBModel.FK_Material_type_Product_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="MasterPolDBModel.FK_Partner_Partner_type" ManuallyRouted="false" />
+        <AssociationConnector Association="MasterPolDBModel.FK_Partner_products_Partner" ManuallyRouted="false" />
+        <AssociationConnector Association="MasterPolDBModel.FK_Partner_products_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="MasterPolDBModel.FK_Product_Product_type" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
